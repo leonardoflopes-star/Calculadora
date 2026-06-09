@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Virtual</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+        .calculadora {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 280px;
+        }
+        /* Elemento Obrigatório */
+        #numero {
+            font-size: 3rem;
+            margin: 10px 0;
+            text-align: right;
+            padding: 10px;
+            background-color: #eaeaea;
+            border-radius: 5px;
+            min-height: 60px;
+            word-wrap: break-word;
+        }
+        .teclado {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        button {
+            font-size: 1.2rem;
+            padding: 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #e0e0e0;
+            transition: background 0.2s;
+        }
+        button:hover { background-color: #d4d4d4; }
+        .btn-op { background-color: #ff9f0a; color: white; }
+        .btn-op:hover { background-color: #cc7f08; }
+        .btn-igual { grid-column: span 2; background-color: #28a745; color: white; }
+        .btn-igual:hover { background-color: #218838; }
+        .btn-especial { grid-column: span 2; background-color: #dc3545; color: white; font-size: 1rem; }
+        .btn-especial:hover { background-color: #c82333; }
+        .btn-inc-dec { grid-column: span 2; background-color: #17a2b8; color: white; font-size: 1rem;}
+        .btn-inc-dec:hover { background-color: #138496; }
+
+        /* Classes para o Bônus de Cor */
+        .positivo { color: green !important; }
+        .negativo { color: red !important; }
+        .neutro { color: black !important; }
+    </style>
+</head>
+<body>
+
+    <div class="calculadora">
+        <h1 id="numero">0</h1>
+
+        <div class="teclado">
+            <button id="btnIncremento" class="btn-inc-dec">Incremento</button>
+            <button id="btnDecremento" class="btn-inc-dec">Decremento</button>
+
+            <button class="btn-num">7</button>
+            <button class="btn-num">8</button>
+            <button class="btn-num">9</button>
+            <button id="btnDivisao" class="btn-op">/</button>
+
+            <button class="btn-num">4</button>
+            <button class="btn-num">5</button>
+            <button class="btn-num">6</button>
+            <button id="btnMultiplicacao" class="btn-op">*</button>
+
+            <button class="btn-num">1</button>
+            <button class="btn-num">2</button>
+            <button class="btn-num">3</button>
+            <button id="btnSubtracao" class="btn-op">-</button>
+
+            <button class="btn-num">0</button>
+            <button id="btnZerar" class="btn-especial">Zerar</button>
+            <button id="btnAdicao" class="btn-op">+</button>
+
+            <button id="btnIgual" class="btn-igual">=</button>
+        </div>
+    </div>
+
+    <script src="Funcionalidade.Js"></script>
+</body>
+</html>
